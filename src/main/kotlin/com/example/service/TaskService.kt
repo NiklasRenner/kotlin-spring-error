@@ -22,8 +22,6 @@ class TaskService(val taskDao: TaskDao, val userService: UserService) {
         }
 
         task.users.add(user)
-        // if this isn't uncommented it fails on first insert
-        // user.tasks.add(task)
 
         return taskDao.save(task)
     }
